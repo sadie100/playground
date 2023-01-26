@@ -9,9 +9,9 @@ type TodoITemProps = {
 };
 
 const Remove = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   color: #dee2e6;
   font-size: 24px;
   cursor: pointer;
