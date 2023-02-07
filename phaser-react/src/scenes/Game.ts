@@ -29,5 +29,7 @@ export default class Game extends Phaser.Scene {
       collidingTileColor: new Phaser.Display.Color(243, 234, 48, 255),
       faceColor: new Phaser.Display.Color(40, 39, 37, 255),
     });
+
+    const char = this.add.sprite(128, 264, "char");
   }
 }

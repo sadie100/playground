@@ -1,0 +1,39 @@
+{
+  "frames": {
+    "Small-8-Direction-Characters_by_AxulArt.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 126,
+        "h": 254
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 8,
+        "w": 126,
+        "h": 254
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 264
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 126,
+      "h": 254
+    },
+    "scale": 1
+  }
+}

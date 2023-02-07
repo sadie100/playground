@@ -1,14 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import Main from "./Main";
 import reportWebVitals from "./reportWebVitals";
+import GameContextProvider from "./contexts/GameContext";
+import "./PhaserGame";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <GameContextProvider>
+      <Main />
+    </GameContextProvider>
   </React.StrictMode>
 );
 
