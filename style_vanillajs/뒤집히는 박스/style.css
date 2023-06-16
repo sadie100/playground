@@ -1,0 +1,30 @@
+.card {
+  width: 200px;
+  height: 200px;
+  margin: 20px 10px;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.cardPlane {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  border: 1px solid red;
+  background-color: orange;
+}
+
+.back {
+  border: 1px solid blue;
+  background-color: skyblue;
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
