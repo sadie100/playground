@@ -19,6 +19,7 @@ const gameBoard = document.querySelector(".game-board");
 const message = document.querySelector(".message");
 const scoreDisplay = document.getElementById("score");
 const finalScore = document.getElementById("final-score");
+const resetButton = document.getElementById("reset-button");
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -26,6 +27,17 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
+
+// Shuffle the colors array
+shuffleArray(colors);
+
+// Create and shuffle an array to hold pairs of colors
+const colorPairs = [...colors, ...colors];
+shuffleArray(colorPairs);
+
+colorPairs.forEach((cardColor) => {
+  createCard(cardColor);
+});
 
 function createCard(cardColor) {
   const card = document.createElement("div");
@@ -75,5 +87,21 @@ function checkMatch() {
   flippedCards = [];
 }
 
-shuffleArray(colors.concat(colors));
-colors.concat(colors).forEach(createCard);
+resetButton.addEventListener("click", () => {
+  // Reset the game
+  gameBoard.innerHTML = "";
+  score = 0;
+  scoreDisplay.textContent = score;
+  flippedCards = [];
+  matchedPairs = 0;
+  message.style.display = "none";
+
+  // Shuffle the colors and recreate the board
+  shuffleArray(colors);
+  const newColorPairs = [...colors, ...colors];
+  shuffleArray(newColorPairs);
+
+  newColorPairs.forEach((cardColor) => {
+    createCard(cardColor);
+  });
+});

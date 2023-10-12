@@ -40,3 +40,12 @@ body {
   color: green;
   display: none;
 }
+
+button {
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
